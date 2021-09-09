@@ -24,6 +24,6 @@ jobs:
       - uses: xu-cheng/texlive-action/full@v1
         with:
           run: |
-              find . -name "*.tex" -exec latexmk -pdf -file-line-error -interaction=nonstopmode {} \;
+              find . -name "main/*.tex" -exec latexmk -pdf -file-line-error -interaction=nonstopmode {} \;
         
       
