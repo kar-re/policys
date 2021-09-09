@@ -12,8 +12,9 @@ jobs:
           repository: Dsek-LTH/dsek-latex
       - name: Show Working directory
         run: ls
-      - name: Compile LaTeX documents
-        uses: docker://xucheng/texlive-full:latest
-        run: |
-          find . -name "*.tex" -exec latexmk -pdf -file-line-error -interaction=nonstopmode {} \;
+      - uses: xu-cheng/texlive-action/full@v1
+        with:
+          run: |
+              find . -name "*.tex" -exec latexmk -pdf -file-line-error -interaction=nonstopmode {} \;
+        
       
